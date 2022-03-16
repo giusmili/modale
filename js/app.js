@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", e => {
     console.log(navigator.userAgent);
     let el, modal, closed, open_modal, closed_all;
     el = document.querySelectorAll(".grid-picture-large li");
-    modal = document.querySelector(".modale");
+    modal = document.querySelector(".parent-modale");
     closed = document.querySelector(".modale button");
     closed_all = document.querySelector(".modale img");
 

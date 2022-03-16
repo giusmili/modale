@@ -106,7 +106,18 @@ ul figure:hover figcaption{
     transform: scale(1);
 }
 /* modale */
-.modale{
+.parent-modale{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+.parent-modale .modale{
     max-width: 80rem;
     padding: 1rem;
     position: fixed;
@@ -115,13 +126,12 @@ ul figure:hover figcaption{
     transform: translate(-50%, -50%);
     background-color: #fff;
     box-shadow: 0 0 1rem rgba(0,0,0,0.6);
-    z-index: -1;
-    opacity: 0;
+    z-index: 2;
     cursor: pointer;
-    transition: all 500ms ease-in-out;
+    
     
 }
-.modale .desc{
+.parent-modale .modale .desc{
     position: static;
     transition: none;
     background-color: #fff;
@@ -133,17 +143,17 @@ ul figure:hover figcaption{
     opacity: 1;
     transform-origin: center center;
 }
-.modale .desc h3{
+.parent-modale .modale .desc h3{
     font-size: x-large;
     font-weight: 400;
     background-color: #222;
     color: #fff;
     padding: 1rem;
 }
-.modale .desc p :is(time){
+.parent-modale .modale .desc p :is(time){
     padding: 1rem;
 }
-.modale button{
+.parent-modale .modale button{
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
@@ -154,4 +164,5 @@ ul figure:hover figcaption{
 }
 footer p{
     text-align: center;
+    color: #fff;
 }
