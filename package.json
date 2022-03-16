@@ -1,0 +1,15 @@
+{
+  "name": "modale",
+  "version": "1.0.0",
+  "description": "* vérifier la version node js et npm puis\r * npm init\r * npm install --save-dev babel-cli babel-preset-env\r * Ajouter dans le jSon la ligne de code qui suit : \"build\": \"babel --no-babelrc src -w -d js --preset=env\"\r * Puis cibler le dossier \"SRC\" et commande :npm run build\r * Nota bene : pour installer le CLI faire d'abord npm init pour le package.json",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel --no-babelrc src -w -d js --preset=env"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
