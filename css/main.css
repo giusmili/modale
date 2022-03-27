@@ -70,6 +70,40 @@ header h1{
     text-align: center;
     padding: 2rem 0;
 }
+/* navigation */
+nav{
+    max-width: 120rem;
+    margin: 2rem auto;
+    line-height: 4.5rem;
+    background-color: inherit; 
+}
+nav ul{
+    font-size: 0;
+
+    
+    
+}
+nav ul li{
+    display: inline-block;
+    font-size: initial;
+    width: calc(100% / 4);
+}
+nav ul li:not(li:last-child){
+    border-right: solid .1rem #ccc;
+}
+nav ul li a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #222;
+    background-color: inherit;
+    transition: background-color .6s ease-in-out;
+    font-weight: bolder;
+}
+nav ul li:hover a{
+    background: #fee9ab;
+}
 main .grid-picture-large{
     display:  grid;
     max-width: 90rem;
@@ -78,11 +112,14 @@ main .grid-picture-large{
     gap: 1rem;
     padding: 1rem;
 }
+
 ul figure{
     position: relative;
+    border: solid .1rem #fafafa;
 }
 ul figure .material-icons{
     vertical-align: -.4rem;
+    
 }
 /* Overley effect */
 ul figure figcaption{

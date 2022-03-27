@@ -1,12 +1,19 @@
 document.addEventListener("DOMContentLoaded", e => {
     console.log(navigator.userAgent);
-    let el, modal, closed, open_modal, closed_all;
+
+    let el, modal, closed, open_modal, closed_all, footer_right;
+
     el = document.querySelectorAll(".grid-picture-large li");
     modal = document.querySelector(".parent-modale");
     closed = document.querySelector(".modale button");
     closed_all = document.querySelector(".modale img");
+    footer_right = document.querySelector("footer p");
+
+    let time = new Date().getFullYear();
+    footer_right.innerText += ` ${time}`;
 
     /* property elements */
+
     open_modal = function () {
         console.log(this.dataset);
         /* les variables */
@@ -14,7 +21,8 @@ document.addEventListener("DOMContentLoaded", e => {
         let title = this.dataset.title;
         let desc = this.dataset.description;
         let dates = this.dataset.dates;
-        modal.classList.add("modale-active");
+        modal.classList.add("modale-active"); /* ajouter la classe active */
+        /* sélectionner les sélecteurs html*/
         document.querySelector(".modale img").setAttribute("src", image);
         document.querySelector(".modale .desc h3").innerText = title;
         document.querySelector(".modale .desc p").innerHTML = `<strong>Déscription : </strong>${desc}`;
